@@ -32,6 +32,7 @@
             this.favoritosListBox = new System.Windows.Forms.ListBox();
             this.favoritosButton = new System.Windows.Forms.Button();
             this.pictureBox = new System.Windows.Forms.PictureBox();
+            this.removerButton = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox)).BeginInit();
             this.SuspendLayout();
             // 
@@ -79,11 +80,22 @@
             this.pictureBox.TabIndex = 3;
             this.pictureBox.TabStop = false;
             // 
+            // removerButton
+            // 
+            this.removerButton.Location = new System.Drawing.Point(391, 127);
+            this.removerButton.Name = "removerButton";
+            this.removerButton.Size = new System.Drawing.Size(149, 32);
+            this.removerButton.TabIndex = 4;
+            this.removerButton.Text = "Remover dos favoritos";
+            this.removerButton.UseVisualStyleBackColor = true;
+            this.removerButton.Click += new System.EventHandler(this.removerButton_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(552, 682);
+            this.Controls.Add(this.removerButton);
             this.Controls.Add(this.pictureBox);
             this.Controls.Add(this.favoritosButton);
             this.Controls.Add(this.favoritosListBox);
@@ -102,6 +114,7 @@
         private System.Windows.Forms.ListBox favoritosListBox;
         private System.Windows.Forms.Button favoritosButton;
         private System.Windows.Forms.PictureBox pictureBox;
+        private System.Windows.Forms.Button removerButton;
     }
 }
 
