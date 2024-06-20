@@ -38,6 +38,25 @@ namespace Heranca
             listBox1.Items.Add(funcionario.Email);
             listBox1.Items.Add(funcionario.Cargo);
             listBox1.Items.Add(funcionario.Salario);
+            listBox1.Items.Add("-----------------");
+        }
+
+        private void EnviarEmail(CadastroBase dados)
+        {
+            string mensagem = string.Format("Enviando email para {0}", dados.Nome);
+            listBox1.Items.Add(mensagem);   
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            CadastroBase a = new Aluno();
+            a.Nome = "Joaquim";
+
+            CadastroBase b = new Funcionario();
+            b.Nome = "Antonio";
+
+            EnviarEmail(a);
+            EnviarEmail(b);
 
         }
     }
