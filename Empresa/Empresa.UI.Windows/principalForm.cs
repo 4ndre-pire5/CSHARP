@@ -17,9 +17,10 @@ namespace Empresa.UI.Windows
             InitializeComponent();
         }
 
-        private void novoClienteToolStripMenuItem_Click(object sender, EventArgs e)
+
+        private void clientesToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            ClienteIncluirForm f = new ClienteIncluirForm();
+            var f = new ClientesForm();
             f.ShowDialog();
         }
     }

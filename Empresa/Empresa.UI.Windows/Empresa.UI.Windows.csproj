@@ -52,6 +52,12 @@
     <Compile Include="ClienteIncluirForm.Designer.cs">
       <DependentUpon>ClienteIncluirForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="ClientesForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClientesForm.Designer.cs">
+      <DependentUpon>ClientesForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="principalForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -62,6 +68,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="ClienteIncluirForm.resx">
       <DependentUpon>ClienteIncluirForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ClientesForm.resx">
+      <DependentUpon>ClientesForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="principalForm.resx">
       <DependentUpon>principalForm.cs</DependentUpon>
@@ -87,6 +96,16 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Empresa.DB\Empresa.DB.csproj">
+      <Project>{fefecdf9-3a5e-47a6-81a7-2fbd6b7983db}</Project>
+      <Name>Empresa.DB</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Empresa.Models\Empresa.Models.csproj">
+      <Project>{b5b96bfe-9ff3-41e5-b99e-c85296500823}</Project>
+      <Name>Empresa.Models</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
