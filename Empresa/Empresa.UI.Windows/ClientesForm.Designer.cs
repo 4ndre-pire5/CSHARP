@@ -35,10 +35,10 @@
             this.excluirButton = new System.Windows.Forms.Button();
             this.sairButton = new System.Windows.Forms.Button();
             this.confirmarIncluirButton = new System.Windows.Forms.Button();
+            this.confirmarAlterarButton = new System.Windows.Forms.Button();
             this.voltarButton = new System.Windows.Forms.Button();
             this.confirmarExcluirButton = new System.Windows.Forms.Button();
             this.conteudoPanel = new System.Windows.Forms.Panel();
-            this.listaDataGridView = new System.Windows.Forms.DataGridView();
             this.fichaPanel = new System.Windows.Forms.Panel();
             this.telefoneTextBox = new System.Windows.Forms.TextBox();
             this.telefoneLabel = new System.Windows.Forms.Label();
@@ -48,12 +48,12 @@
             this.nomeLabel = new System.Windows.Forms.Label();
             this.idTextBox = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.confirmarAlterarButton = new System.Windows.Forms.Button();
+            this.listaDataGridView = new System.Windows.Forms.DataGridView();
             this.panel1.SuspendLayout();
             this.flowLayoutPanel1.SuspendLayout();
             this.conteudoPanel.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.listaDataGridView)).BeginInit();
             this.fichaPanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.listaDataGridView)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -100,6 +100,7 @@
             this.alterarButton.TabIndex = 1;
             this.alterarButton.Text = "Alterar";
             this.alterarButton.UseVisualStyleBackColor = true;
+            this.alterarButton.Click += new System.EventHandler(this.alterarButton_Click);
             // 
             // excluirButton
             // 
@@ -109,6 +110,7 @@
             this.excluirButton.TabIndex = 2;
             this.excluirButton.Text = "Excluir";
             this.excluirButton.UseVisualStyleBackColor = true;
+            this.excluirButton.Click += new System.EventHandler(this.excluirButton_Click);
             // 
             // sairButton
             // 
@@ -118,6 +120,7 @@
             this.sairButton.TabIndex = 3;
             this.sairButton.Text = "Sair";
             this.sairButton.UseVisualStyleBackColor = true;
+            this.sairButton.Click += new System.EventHandler(this.sairButton_Click);
             // 
             // confirmarIncluirButton
             // 
@@ -128,6 +131,16 @@
             this.confirmarIncluirButton.Text = "Gravar";
             this.confirmarIncluirButton.UseVisualStyleBackColor = true;
             this.confirmarIncluirButton.Click += new System.EventHandler(this.confirmarIncluirButton_Click);
+            // 
+            // confirmarAlterarButton
+            // 
+            this.confirmarAlterarButton.Location = new System.Drawing.Point(418, 13);
+            this.confirmarAlterarButton.Name = "confirmarAlterarButton";
+            this.confirmarAlterarButton.Size = new System.Drawing.Size(75, 23);
+            this.confirmarAlterarButton.TabIndex = 7;
+            this.confirmarAlterarButton.Text = "Alterar";
+            this.confirmarAlterarButton.UseVisualStyleBackColor = true;
+            this.confirmarAlterarButton.Click += new System.EventHandler(this.confirmarAlterarButton_Click);
             // 
             // voltarButton
             // 
@@ -147,6 +160,7 @@
             this.confirmarExcluirButton.TabIndex = 6;
             this.confirmarExcluirButton.Text = "Confirmar Exclusão";
             this.confirmarExcluirButton.UseVisualStyleBackColor = true;
+            this.confirmarExcluirButton.Click += new System.EventHandler(this.confirmarExcluirButton_Click);
             // 
             // conteudoPanel
             // 
@@ -158,14 +172,6 @@
             this.conteudoPanel.Padding = new System.Windows.Forms.Padding(10);
             this.conteudoPanel.Size = new System.Drawing.Size(701, 286);
             this.conteudoPanel.TabIndex = 1;
-            // 
-            // listaDataGridView
-            // 
-            this.listaDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.listaDataGridView.Location = new System.Drawing.Point(369, 12);
-            this.listaDataGridView.Name = "listaDataGridView";
-            this.listaDataGridView.Size = new System.Drawing.Size(321, 266);
-            this.listaDataGridView.TabIndex = 0;
             // 
             // fichaPanel
             // 
@@ -246,14 +252,13 @@
             this.label1.TabIndex = 8;
             this.label1.Text = "Id";
             // 
-            // confirmarAlterarButton
+            // listaDataGridView
             // 
-            this.confirmarAlterarButton.Location = new System.Drawing.Point(418, 13);
-            this.confirmarAlterarButton.Name = "confirmarAlterarButton";
-            this.confirmarAlterarButton.Size = new System.Drawing.Size(75, 23);
-            this.confirmarAlterarButton.TabIndex = 7;
-            this.confirmarAlterarButton.Text = "Alterar";
-            this.confirmarAlterarButton.UseVisualStyleBackColor = true;
+            this.listaDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.listaDataGridView.Location = new System.Drawing.Point(369, 12);
+            this.listaDataGridView.Name = "listaDataGridView";
+            this.listaDataGridView.Size = new System.Drawing.Size(321, 266);
+            this.listaDataGridView.TabIndex = 0;
             // 
             // ClientesForm
             // 
@@ -268,9 +273,9 @@
             this.panel1.ResumeLayout(false);
             this.flowLayoutPanel1.ResumeLayout(false);
             this.conteudoPanel.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.listaDataGridView)).EndInit();
             this.fichaPanel.ResumeLayout(false);
             this.fichaPanel.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.listaDataGridView)).EndInit();
             this.ResumeLayout(false);
 
         }

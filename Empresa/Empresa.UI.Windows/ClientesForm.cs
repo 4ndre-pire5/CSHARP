@@ -79,6 +79,11 @@ namespace Empresa.UI.Windows
         private void novoButton_Click(object sender, EventArgs e)
         {
             ExibirFicha();
+
+            confirmarAlterarButton.Visible =false;
+            confirmarExcluirButton.Visible=false;
+            confirmarIncluirButton.Visible=true;
+
             LimparFicha();
         }
 
@@ -99,6 +104,69 @@ namespace Empresa.UI.Windows
             db.Incluir(cliente);
 
             ExibirGrid();
+        }
+
+        private void alterarButton_Click(object sender, EventArgs e)
+        {
+            Cliente cliente = (Cliente)listaDataGridView.CurrentRow.DataBoundItem;
+            idTextBox.Text = cliente.Id.ToString();
+            nomeTextBox.Text = cliente.Nome;
+            emailTextBox.Text = cliente.Email;
+            telefoneTextBox.Text = cliente.Telefone;
+
+            ExibirFicha();
+
+            confirmarAlterarButton.Visible = true;
+            confirmarExcluirButton.Visible = false;
+            confirmarIncluirButton.Visible = false;
+        }
+
+        private void confirmarAlterarButton_Click(object sender, EventArgs e)
+        {
+            var cliente = new Cliente();
+            cliente.Id = Convert.ToInt32(idTextBox.Text);
+            cliente.Nome = nomeTextBox.Text;
+            cliente.Email = emailTextBox.Text;
+            cliente.Telefone = telefoneTextBox.Text;
+
+            var db = new ClienteDb();
+            db.Alterar(cliente);
+
+            ExibirGrid();
+        }
+
+        private void excluirButton_Click(object sender, EventArgs e)
+        {
+            Cliente cliente = (Cliente)listaDataGridView.CurrentRow.DataBoundItem;
+            idTextBox.Text = cliente.Id.ToString();
+            nomeTextBox.Text = cliente.Nome;
+            emailTextBox.Text = cliente.Email;
+            telefoneTextBox.Text = cliente.Telefone;
+
+            ExibirFicha();
+
+            confirmarAlterarButton.Visible = false;
+            confirmarExcluirButton.Visible = true;
+            confirmarIncluirButton.Visible = false;
+        }
+
+        private void confirmarExcluirButton_Click(object sender, EventArgs e)
+        {
+            var cliente = new Cliente();
+            cliente.Id = Convert.ToInt32(idTextBox.Text);
+            cliente.Nome = nomeTextBox.Text;
+            cliente.Email = emailTextBox.Text;
+            cliente.Telefone = telefoneTextBox.Text;
+
+            var db = new ClienteDb();
+            db.Excluir(cliente.Id);
+
+            ExibirGrid();
+        }
+
+        private void sairButton_Click(object sender, EventArgs e)
+        {
+            Close();
         }
     }
 }
