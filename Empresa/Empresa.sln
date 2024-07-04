@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Empresa.UI.Windows", "Empre
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Empresa.DB", "Empresa.DB\Empresa.DB.csproj", "{FEFECDF9-3A5E-47A6-81A7-2FBD6B7983DB}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Empresa.UI.Web", "Empresa.UI.Web\Empresa.UI.Web.csproj", "{CF9EC17E-9718-49D7-81BC-7897A4F4AC18}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{FEFECDF9-3A5E-47A6-81A7-2FBD6B7983DB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FEFECDF9-3A5E-47A6-81A7-2FBD6B7983DB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FEFECDF9-3A5E-47A6-81A7-2FBD6B7983DB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CF9EC17E-9718-49D7-81BC-7897A4F4AC18}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CF9EC17E-9718-49D7-81BC-7897A4F4AC18}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CF9EC17E-9718-49D7-81BC-7897A4F4AC18}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CF9EC17E-9718-49D7-81BC-7897A4F4AC18}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
